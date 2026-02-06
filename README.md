@@ -1,2 +1,3 @@
-# GenAI-for-GenZ
-All the learning progress for Intel GenAI for GenZ program.
+# AI Documentation Generator Agent
+
+An advanced GenAI agent that compresses large codebases and automatically generates structured technical documentation in a token-efficient manner.
