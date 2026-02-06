@@ -1,16 +1,17 @@
-// ---------- THEME TOGGLE (GLOBAL, RUNS ONCE) ----------
+// ---------- THEME TOGGLE ----------
 const toggle = document.getElementById("themeToggle");
 
 if (toggle) {
   toggle.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme");
+    const isDark =
+      document.documentElement.getAttribute("data-theme") === "dark";
 
-    if (current === "dark") {
+    if (isDark) {
       document.documentElement.removeAttribute("data-theme");
-      toggle.textContent = "☾";
+      toggle.textContent = "🌙";
     } else {
       document.documentElement.setAttribute("data-theme", "dark");
-      toggle.textContent = "☀";
+      toggle.textContent = "☀️";
     }
   });
 }
@@ -30,9 +31,7 @@ async function generateDoc() {
   try {
     const response = await fetch("/generate", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text })
     });
 
@@ -43,7 +42,6 @@ async function generateDoc() {
     } else {
       output.textContent = data.result;
     }
-
   } catch (err) {
     output.textContent = "⚠️ Server error. Try again.";
   }
