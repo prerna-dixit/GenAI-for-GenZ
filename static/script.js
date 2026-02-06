@@ -4,6 +4,21 @@ async function generateDoc() {
 
   output.textContent = "⏳ Generating documentation...";
 
+  const toggle = document.getElementById("themeToggle");
+
+toggle.addEventListener("click", () => {
+  const current = document.documentElement.getAttribute("data-theme");
+
+  if (current === "dark") {
+    document.documentElement.removeAttribute("data-theme");
+    toggle.textContent = "☾";
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    toggle.textContent = "☀";
+  }
+});
+
+
   const response = await fetch("/generate", {
     method: "POST",
     headers: {
