@@ -11,10 +11,11 @@ if (toggle) {
       toggle.textContent = "🌙";
     } else {
       document.documentElement.setAttribute("data-theme", "dark");
-      toggle.textContent = "☀️";
+      toggle.textContent = "✨";
     }
   });
 }
+
 
 // ---------- DOCUMENT GENERATION ----------
 async function generateDoc() {
