@@ -6,15 +6,33 @@
   <link rel="stylesheet" href="/static/style.css" />
 </head>
 <body>
+  <div class="sparkle-layer"></div>
+
+  <!-- top easter-egg bar -->
+  <div class="top-bar">
+    <span class="japanese-name">プレルナ</span>
+
+    <div class="actions floating-icons">
+  <button id="themeToggle" title="Toggle theme">🌙</button>
+  <a href="#" class="icon float">🐙</a>
+  <a href="#" class="icon float delay">💼</a>
+</div>
+
 
   <div class="container">
     <h1>🧠 GenAI Documentation Agent</h1>
-    <p>Paste a document or code. Let AI compress and document it.</p>
+    <p class="subtitle">
+      Reduce long documents while preserving meaning and context.
+    </p>
 
-    <textarea id="inputText" placeholder="Paste your document here..."></textarea>
+    <textarea
+      id="inputText"
+      placeholder="Paste your document here..."
+    ></textarea>
 
-    <button type="button" onclick="generateDoc()">Generate Documentation</button>
-
+    <button type="button" onclick="generateDoc()">
+      Generate Reduced Version
+    </button>
 
     <pre id="output"></pre>
   </div>
