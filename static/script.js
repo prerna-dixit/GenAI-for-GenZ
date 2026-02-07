@@ -30,7 +30,8 @@ async function generateDoc() {
   output.textContent = "⏳ Generating documentation...";
 
   try {
-    const response = await fetch("/generate", {
+    const response = await fetch("https://genai-for-genz.onrender.com/generate", {
+
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text })
