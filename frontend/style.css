@@ -24,7 +24,7 @@ body {
   font-family: 'Inter', sans-serif;
 
   /* actual wallpaper */
-  background: url("/static/assets/bg.jpg") repeat;
+  background: url("./assets/bg.jpg");
   background-size: 480px auto;
 
   color: var(--text);
@@ -95,7 +95,7 @@ h1 {
 .title-cat {
   width: 64px;          /* ⬅️ bigger */
   height: 64px;
-  background: url("/static/assets/cat-removebg-preview.png") no-repeat center / contain;
+  background: url("/assets/cat-removebg-preview.png") no-repeat center / contain;
   opacity: 0.95;
 }
 
@@ -127,7 +127,7 @@ h1 {
   left: 5%;
   width: 180px;
   height: 180px;
-  background: url("/static/assets/cat-removebg-preview.png") no-repeat center / contain;
+  background: url("/assets/cat-removebg-preview.png") no-repeat center / contain;
   opacity: 0.28;
   animation: floatSoft 14s ease-in-out infinite;
 }
@@ -139,7 +139,7 @@ h1 {
   right: 8%;
   width: 80px;
   height: 80px;
-  background: url("/static/assets/star-removebg-preview.png") no-repeat center / contain;
+  background: url("/assets/star-removebg-preview.png") no-repeat center / contain;
   opacity: 0.22;
   animation: floatSoft 18s ease-in-out infinite;
 }
@@ -172,7 +172,7 @@ h1 {
   top: -10%;
   width: 42px;
   height: 42px;
-  background-image: url("/static/assets/sak-removebg-preview.png");
+  background-image: url("/assets/sak-removebg-preview.png");
   background-size: contain;
   background-repeat: no-repeat;
 
